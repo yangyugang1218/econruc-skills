@@ -1,0 +1,4 @@
+interface:
+  display_name: "EconRUC Literature"
+  short_description: "Position economics papers against Top5 and field literatures."
+  default_prompt: "Use econruc-literature to build a literature positioning map for my economics paper."

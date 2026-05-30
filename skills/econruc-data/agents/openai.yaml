@@ -1,0 +1,4 @@
+interface:
+  display_name: "EconRUC Data"
+  short_description: "Find, clean, audit, and document economics datasets."
+  default_prompt: "Use econruc-data to build a reproducible data plan for my economics project."

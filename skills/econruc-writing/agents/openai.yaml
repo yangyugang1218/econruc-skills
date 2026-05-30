@@ -1,0 +1,4 @@
+interface:
+  display_name: "EconRUC Writing"
+  short_description: "Draft Chinese and English economics manuscripts and reports."
+  default_prompt: "Use econruc-writing to turn my economics research notes into a journal-ready section."

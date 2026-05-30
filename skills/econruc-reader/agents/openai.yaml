@@ -1,0 +1,4 @@
+interface:
+  display_name: "EconRUC Reader"
+  short_description: "Read economics papers and produce structured notes."
+  default_prompt: "Use econruc-reader to read this economics paper and produce structured research notes."

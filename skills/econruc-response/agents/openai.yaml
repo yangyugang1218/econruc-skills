@@ -1,0 +1,4 @@
+interface:
+  display_name: "EconRUC Response"
+  short_description: "Draft economics referee responses and revision memos."
+  default_prompt: "Use econruc-response to write a professional reply to economics referees."

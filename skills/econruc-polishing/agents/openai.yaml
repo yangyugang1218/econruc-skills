@@ -1,0 +1,4 @@
+interface:
+  display_name: "EconRUC Polishing"
+  short_description: "Polish economics prose in Top5 and field-journal style."
+  default_prompt: "Use econruc-polishing to revise this economics paragraph in English and Chinese."

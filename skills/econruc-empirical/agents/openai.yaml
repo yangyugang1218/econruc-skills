@@ -1,0 +1,4 @@
+interface:
+  display_name: "EconRUC Empirical"
+  short_description: "Plan empirical strategy, identification, and robustness checks."
+  default_prompt: "Use econruc-empirical to audit my identification strategy and robustness plan."

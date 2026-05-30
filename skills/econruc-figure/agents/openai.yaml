@@ -1,0 +1,4 @@
+interface:
+  display_name: "EconRUC Figure"
+  short_description: "Create report and paper figures for economics research."
+  default_prompt: "Use econruc-figure to make a publication-quality economics figure."

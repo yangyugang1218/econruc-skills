@@ -1,0 +1,238 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage{iftex}
+\ifXeTeX
+  \usepackage{fontspec}
+  \usepackage{xeCJK}
+  \IfFontExistsTF{Arial}{%
+    \setmainfont{Arial}
+    \setsansfont{Arial}
+  }{%
+    \setmainfont{TeX Gyre Heros}
+    \setsansfont{TeX Gyre Heros}
+  }
+  \IfFontExistsTF{Microsoft YaHei}{%
+    \setCJKmainfont{Microsoft YaHei}
+    \setCJKsansfont{Microsoft YaHei}
+  }{%
+    \setCJKmainfont{SimSun}
+    \setCJKsansfont{SimSun}
+  }
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{amsmath,amssymb,booktabs,graphicx,tabularx,tikz}
+\usepackage{xcolor}
+
+\definecolor{econblue}{HTML}{2B2FB3}
+\definecolor{econink}{HTML}{111111}
+\definecolor{econgray}{HTML}{6B7280}
+\definecolor{econlight}{HTML}{F1F1F1}
+\definecolor{econline}{HTML}{E5E7EB}
+\definecolor{econred}{HTML}{C7342D}
+\definecolor{econgreen}{HTML}{69A84F}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+  \hfill{\scriptsize\color{econgray}\insertframenumber}\hspace{1.15em}\vspace{0.72em}
+}
+\setbeamertemplate{itemize item}{\color{econblue}$\blacktriangleright$}
+\setbeamertemplate{itemize subitem}{\color{econblue}{\scriptsize--}}
+\setbeamercolor{title}{fg=econblue}
+\setbeamercolor{frametitle}{fg=econblue}
+\setbeamercolor{normal text}{fg=econink,bg=white}
+\setbeamercolor{structure}{fg=econblue}
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{subtitle}{size=\normalsize}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+\setbeamerfont{itemize/enumerate body}{size=\large}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamersize{text margin left=1.35em,text margin right=1.35em}
+
+\newenvironment{wideitemize}{%
+  \begin{itemize}\setlength{\itemsep}{0.62em}
+}{%
+  \end{itemize}
+}
+
+\newcommand{\blue}[1]{\textcolor{econblue}{#1}}
+\newcommand{\gray}[1]{\textcolor{econgray}{#1}}
+\newcommand{\red}[1]{\textcolor{econred}{#1}}
+\newcommand{\green}[1]{\textcolor{econgreen}{#1}}
+\newcommand{\source}[1]{\vfill{\scriptsize\color{econgray}#1}}
+\newcommand{\callout}[1]{%
+  \tikz[baseline=(n.base)]\node[fill=econblue,text=white,inner sep=1.5pt,minimum width=1.1em,minimum height=1.1em,font=\scriptsize\bfseries] (n) {#1};%
+}
+\newcommand{\conceptbox}[2]{%
+  \begin{minipage}[t]{\linewidth}
+    \colorbox{econlight}{%
+      \begin{minipage}[t]{0.92\linewidth}
+        \vspace{0.8em}
+        {\centering\color{econblue}\bfseries #1\par}
+        \vspace{0.35em}
+        \raggedright #2
+        \vspace{0.7em}
+      \end{minipage}%
+    }
+  \end{minipage}%
+}
+\newcommand{\sectionframe}[1]{%
+  \begin{frame}[plain]
+    \vfill
+    {\Huge\color{econblue}\bfseries #1\par}
+    \vspace{0.8em}
+    {\color{econline}\rule{0.62\linewidth}{0.8pt}\par}
+    \vfill
+  \end{frame}
+}
+
+\newcommand{\rucaffiliation}{School of Applied Economics}
+\newcommand{\firstauthor}{Zhang San}
+\newcommand{\secondauthor}{Yang Yugang}
+\newcommand{\firstaffiliation}{\rucaffiliation}
+\newcommand{\secondaffiliation}{\rucaffiliation}
+\newcommand{\ruclogofallback}{%
+  \begin{tikzpicture}[baseline=(wordmark.base),x=1cm,y=1cm]
+    \node[circle,draw=econred,line width=0.75pt,minimum size=0.92cm,inner sep=0pt] at (0,0) {\textcolor{econred}{\scriptsize RUC}};
+    \node[anchor=west,text=econred,font=\fontsize{8.5}{10}\selectfont\bfseries] (wordmark) at (0.68,0.10) {RENMIN UNIVERSITY OF CHINA};
+  \end{tikzpicture}%
+}
+\newcommand{\ruclogo}{%
+  \IfFileExists{assets/ruc_logo.png}{\includegraphics[width=4.25cm]{assets/ruc_logo.png}}{%
+    \IfFileExists{ruc_logo.png}{\includegraphics[width=4.25cm]{ruc_logo.png}}{%
+      \IfFileExists{assets/ruc_logo_mark.tex}{\input{assets/ruc_logo_mark.tex}}{%
+        \IfFileExists{ruc_logo_mark.tex}{\input{ruc_logo_mark.tex}}{\ruclogofallback}%
+      }%
+    }%
+  }%
+}
+
+\newcommand{\maketitleframe}{%
+  \begin{frame}[plain]
+    \begin{center}
+      \vspace{0.72cm}
+      {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}
+      \ifx\insertsubtitle\empty\else
+        \vspace{0.22cm}
+        {\usebeamerfont{subtitle}\color{econink}\insertsubtitle\par}
+      \fi
+      \vspace{0.78cm}
+      {\large\firstauthor\par}
+      {\normalsize\itshape\firstaffiliation\par}
+      \vspace{0.42cm}
+      {\large\secondauthor\par}
+      {\normalsize\itshape\secondaffiliation\par}
+      \vfill
+      {\normalsize\insertinstitute\par}
+      \vspace{0.16cm}
+      {\normalsize\insertdate\par}
+      \vspace{0.35cm}
+    \end{center}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=south west,xshift=0.63cm,yshift=0.36cm] at (current page.south west) {\ruclogo};
+    \end{tikzpicture}
+  \end{frame}
+}
+
+\newcounter{framenumberappendix}
+\newcommand{\backupbegin}{\setcounter{framenumberappendix}{\value{framenumber}}}
+\newcommand{\backupend}{\setcounter{framenumber}{\value{framenumberappendix}}}
+
+\title{Paper Title}
+\subtitle{}
+\author{\firstauthor \and \secondauthor}
+\institute{Renmin University of China}
+\date{\today}
+
+\begin{document}
+
+\maketitleframe
+
+% ECONRUC_BODY_BEGIN
+\sectionframe{Introduction}
+
+\begin{frame}{Research motivation}
+  \begin{wideitemize}
+    \item Why does this economic margin matter?
+    \item What puzzle, institution, or empirical fact makes the question nontrivial?
+    \item Why should the audience care before seeing the model or results?
+  \end{wideitemize}
+\end{frame}
+
+\begin{frame}{Research question}
+  \begin{wideitemize}
+    \item What is the exact question?
+    \item What comparison or counterfactual is needed to answer it?
+    \item Why is the answer not already known?
+  \end{wideitemize}
+\end{frame}
+
+\begin{frame}{Research contribution}
+  \begin{wideitemize}
+    \item \blue{Substantive:} what do we learn about the economic mechanism?
+    \item \blue{Design/data/model:} what lets the paper answer the question?
+    \item \blue{Literature/policy:} what debate does the paper move?
+  \end{wideitemize}
+\end{frame}
+
+\begin{frame}{Preview of main findings}
+  \begin{wideitemize}
+    \item \blue{Finding 1:} state the main quantitative or theoretical result.
+    \item \blue{Mechanism:} explain the key economic channel.
+    \item \blue{Implication:} state what changes about policy or theory.
+  \end{wideitemize}
+\end{frame}
+
+\begin{frame}{Outline}
+  \begin{wideitemize}
+    \item Introduction and setting
+    \item Model or identification strategy
+    \item Data and main results
+    \item Mechanisms and robustness
+    \item Conclusion
+  \end{wideitemize}
+\end{frame}
+
+\begin{frame}{A conceptual contrast}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.46\textwidth}
+      \conceptbox{Benchmark}{%
+        \begin{itemize}\setlength{\itemsep}{0.35em}
+          \item What would standard theory predict?
+          \item What would happen under frictionless competition?
+        \end{itemize}
+      }
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \conceptbox{This paper}{%
+        \begin{itemize}\setlength{\itemsep}{0.35em}
+          \item What friction or strategic force changes the prediction?
+          \item What evidence distinguishes the mechanism?
+        \end{itemize}
+      }
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Conclusion}
+  \begin{wideitemize}
+    \item This paper studies \blue{[question]}.
+    \item It shows \blue{[main answer]} using \blue{[design/model/data]}.
+    \item The result matters because \blue{[economic implication]}.
+  \end{wideitemize}
+\end{frame}
+% ECONRUC_BODY_END
+
+\appendix
+\backupbegin
+\begin{frame}{Backup: additional details}
+  \begin{wideitemize}
+    \item Put full tables, derivations, and additional robustness here.
+  \end{wideitemize}
+\end{frame}
+\backupend
+
+\end{document}

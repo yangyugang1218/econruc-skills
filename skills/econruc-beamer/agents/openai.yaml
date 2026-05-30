@@ -1,0 +1,4 @@
+interface:
+  display_name: "EconRUC Beamer"
+  short_description: "Turn economics papers into polished LaTeX Beamer decks."
+  default_prompt: "Use econruc-beamer to convert my economics paper into a seminar-ready Beamer deck."
