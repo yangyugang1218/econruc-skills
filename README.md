@@ -62,6 +62,22 @@ git pull
 cp -R skills/* ~/.codex/skills/
 ```
 
+## 维护者：一键同步并上传
+
+本仓库根目录提供两个 Windows 一键脚本：
+
+- `首次上传到GitHub.bat`：第一次把本地仓库覆盖上传到 GitHub 时使用。适合远端仓库只有 GitHub 自动生成的初始 README 的情况。
+- `一键上传到GitHub.bat`：后续日常更新使用。
+
+脚本会自动完成：
+
+1. 从 `%USERPROFILE%\.codex\skills` 同步最新的 `econruc-*` skills 到本仓库的 `skills/`。
+2. `git add` 所有变更。
+3. 自动生成一次 commit。
+4. 推送到 `https://github.com/yangyugang1218/econruc-skills`。
+
+第一次运行时，如果 GitHub 要求登录，请在弹出的 GitHub / Git Credential Manager 窗口中授权。授权成功后，后续通常只需要双击 `一键上传到GitHub.bat`。
+
 ## 使用方法
 
 在 Codex 中直接提到 skill 名称，或提出与 skill 描述匹配的任务即可触发。
@@ -144,4 +160,3 @@ econruc-skills/
 - 对于需要最新数据、法律政策、统计口径或文献检索的任务，应验证来源和日期。
 - 对于需要渲染图表、Beamer 或处理文档的任务，本地环境仍需安装相应运行时和依赖。
 - 如果将本仓库公开分享，建议后续补充明确的开源许可证。
-
