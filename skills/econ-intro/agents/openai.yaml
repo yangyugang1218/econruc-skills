@@ -1,0 +1,4 @@
+interface:
+  display_name: "Econ Introduction"
+  short_description: "Draft Top5-style economics paper introductions."
+  default_prompt: "Use $econ-intro to draft a Top5-style economics paper introduction from my research notes."
