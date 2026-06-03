@@ -1,0 +1,4 @@
+interface:
+  display_name: "EconRUC Translate"
+  short_description: "英文论文逐句翻译、TeX 排版和 PDF 编译"
+  default_prompt: "Use $econruc-translate to translate this English academic paper into Chinese TeX and compile a polished PDF."

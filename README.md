@@ -9,6 +9,7 @@
 - `econ-intro`：专门帮助撰写、诊断和重构经济学论文引言，兼顾英文 Top5/领域顶刊和中文顶级期刊风格。
 - `econruc-writing`：起草和重构经济学论文、政策报告、摘要、结果段、讨论段和中英文研究文本。
 - `econruc-polishing`：润色中英文经济学学术写作，使表达更接近 Top5 和领域顶刊风格。
+- `econruc-translate`：把英文经济学论文、工作论文和 PDF 逐句翻译成中文，保留结构、脚注、公式、引用和图表标题，并可生成 TeX/PDF。
 - `econruc-reader`：阅读经济学论文，生成结构化笔记、批判性问题、图表解读和复现备忘录。
 - `econruc-data`：进行数据检索、清洗审计、变量字典和可复现数据管线设计。
 - `econruc-figure`：制作报告图和论文图，包括事件研究、系数图、binscatter、RD 图、地图和分解图等。
@@ -110,6 +111,7 @@ The suite is designed for research assistance rather than automatic paper genera
 - `econ-intro`: draft, diagnose, and restructure economics paper introductions in English or Chinese, with Top5, field-journal, and Chinese top-journal conventions.
 - `econruc-writing`: draft and structure economics papers, reports, abstracts, results sections, discussions, and bilingual research prose.
 - `econruc-polishing`: polish English and Chinese economics writing in a Top5 and leading field-journal style.
+- `econruc-translate`: translate English economics papers, working papers, and PDFs into faithful Simplified Chinese while preserving structure, footnotes, equations, citations, and figure/table captions.
 - `econruc-reader`: read economics papers and produce structured notes, critiques, seminar questions, figure/table interpretations, and replication memos.
 - `econruc-data`: find, clean, audit, and document economics datasets before analysis or visualization.
 - `econruc-figure`: create report and paper figures, including event studies, coefficient plots, binscatter, RD plots, maps, and decomposition charts.
