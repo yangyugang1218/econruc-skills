@@ -1,0 +1,4 @@
+interface:
+  display_name: "EconRUC Report Writing"
+  short_description: "研报、政策分析和咨询报告写作"
+  default_prompt: "Use $econruc-report-writing to draft a sourced, evidence-based policy or industry research report."

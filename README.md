@@ -10,6 +10,7 @@
 
 - `econ-intro`：专门帮助撰写、诊断和重构经济学论文引言，兼顾英文 Top5/领域顶刊和中文顶级期刊风格。
 - `econruc-writing`：起草和重构经济学论文、政策报告、摘要、结果段、讨论段和中英文研究文本。
+- `econruc-report-writing`：撰写研报、政策分析、产业分析和咨询报告，强调真实数据、来源可追溯、结构清晰和逻辑可靠。
 - `econruc-polishing`：润色中英文经济学学术写作，使表达更接近 Top5 和领域顶刊风格。
 - `econruc-translate`：把英文经济学论文、工作论文和 PDF 逐句翻译成中文，保留结构、脚注、公式、引用和图表标题，并可生成 TeX/PDF。
 - `econruc-reader`：阅读经济学论文，生成结构化笔记、批判性问题、图表解读和复现备忘录。
@@ -23,6 +24,7 @@
 ### 使用建议
 
 - 写论文主体或章节结构时，用 `econruc-writing`。
+- 写研报、政策分析、产业分析或咨询报告时，用 `econruc-report-writing`。
 - 只处理引言、研究动机、贡献段或 introduction 结构时，用 `econ-intro`。
 - 图表任务从 `econruc-figure` 开始；如果数据还没有整理好，先用 `econruc-data`。
 - 识别策略、稳健性、机制和异质性问题，用 `econruc-empirical`。
@@ -98,9 +100,10 @@ Copy-Item -Path ".\skills\*" -Destination "$env:USERPROFILE\.codex\skills" -Recu
 4. `econruc-empirical`：设计识别策略、稳健性和机制检验。
 5. `econruc-figure`：制作图表和可视化证据。
 6. `econruc-writing` / `econ-intro`：起草论文段落和引言。
-7. `econruc-polishing`：压缩语言、校准因果表达。
-8. `econruc-beamer`：转成学术汇报。
-9. `econruc-response`：用于审稿意见回复和修回。
+7. `econruc-report-writing`：把数据、政策背景和证据链转成研报、政策分析或咨询报告。
+8. `econruc-polishing`：压缩语言、校准因果表达。
+9. `econruc-beamer`：转成学术汇报。
+10. `econruc-response`：用于审稿意见回复和修回。
 
 ## English Overview
 
@@ -112,6 +115,7 @@ The suite is designed for research assistance rather than automatic paper genera
 
 - `econ-intro`: draft, diagnose, and restructure economics paper introductions in English or Chinese, with Top5, field-journal, and Chinese top-journal conventions.
 - `econruc-writing`: draft and structure economics papers, reports, abstracts, results sections, discussions, and bilingual research prose.
+- `econruc-report-writing`: draft sourced policy reports, industry research reports, consulting-style reports, market studies, and briefing memos with verified data and clear logic.
 - `econruc-polishing`: polish English and Chinese economics writing in a Top5 and leading field-journal style.
 - `econruc-translate`: translate English economics papers, working papers, and PDFs into faithful Simplified Chinese while preserving structure, footnotes, equations, citations, and figure/table captions.
 - `econruc-reader`: read economics papers and produce structured notes, critiques, seminar questions, figure/table interpretations, and replication memos.
